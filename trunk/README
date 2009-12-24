@@ -1,0 +1,21 @@
+Pyndk
+=======
+Pyndk is an open source version of the scalable, efficiently network 
+develop framework.
+
+Directors
+=========
+
+pyndk
+    /docs           # documents
+    /examples       # some examples
+    /pyndk          # source files of framework
+    /tests          # some test code
+
+Installation
+============
+To install:
+
+    sudo python setup.py install
+
+

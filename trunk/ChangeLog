@@ -1,0 +1,56 @@
+PYNDK CHANGES
+============================
+
+Changes in 1.1.1-svn-262
+----------------------------
+
+* timer_queue.py 修改复了定时器队列pop成员时，没有重新构造堆结构的缺陷
+调整了定时器到期的精度
+
+* reactor.py 反应器可以根据参数指定是多线程版本还是多线程版本
+
+Changes in 1.1.0-svn-250
+----------------------------
+
+* reactor.py 修正了token同步机制
+
+* connector.py 修正了在connec注册反应器时在互斥体的保护下设置定时器ID的缺陷，这样可能是在没有设置定时之前就被取消掉了
+
+* acceptor.py 增加了设置新接收连接为非阻塞模式的参数
+
+* timer_queue.py 将datetime.datetime.now()的值改为time.time()时间能更精确一些
+
+* docs/tutorial 增加了一个各对象的说明文档
+
+* examples/* 增加了几个实例
+
+Changes in 1.0.0 svn-xxx
+----------------------------	
+* reactor.py : Support multi-thread called register_handler method,
+support windows select.
+
+* svc_handler.py : Windows not support socket.fromfd
+
+* timer_queue.py : Crontab timer is ok.
+
+Changes in 0.1.2 svn-xxx
+----------------------------	
+
+* connector.py : Return True in handle_* methods.
+
+* timer_queue.py : In expire method mustn't use iterator, instead of heappop.
+
+Changes in 0.1.1 svn-xxx
+----------------------------	
+
+* pyndk: create project
+
+* reactor.py : Support epoll only currently. 
+
+* acceptor.py : Parameter of Acceptor'construct is an object-type that
+inherited SvcHandler
+
+* connector.py : 'connect' function return None.
+
+* timer_queue.py : Add timer in crontab style, but not support currently. 
+
